@@ -23,12 +23,12 @@ const App = () => {
     <View>
       <View >
         <Text >
-          Spiritasdasdasdasd
+          Spi
         </Text>
       </View>
       <View>
       <Pressable>
-      <Text>로그인1</Text>
+      <Text>asdasd</Text>
         </Pressable>
     </View>
     <View>
