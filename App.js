@@ -23,7 +23,7 @@ const App = () => {
     <View>
       <View >
         <Text >
-          Spiriataa
+          Spiriataaasdasdadsadasdasd
         </Text>
       </View>
       <View>
