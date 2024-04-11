@@ -11,7 +11,7 @@ import {
   TextInput,
 } from 'react-native';
 
-const App = () => {
+const FindPwd = () => {
 
   return (
 
@@ -200,4 +200,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default App;
+export default FindPwd;

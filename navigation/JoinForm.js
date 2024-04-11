@@ -11,7 +11,7 @@ import {
   TextInput,
 } from 'react-native';
 
-const App = () => {
+const JoinForm = () => {
 
   return (
 
@@ -21,13 +21,21 @@ const App = () => {
           source={require('././assets/leftLine.png')}
           style={styles.icon}
         />
-        <Text style={styles.topBold}>비밀번호 찾기</Text>
+        <Text style={styles.topBold}>회원가입</Text>
       </View>
 
-      <View style={styles.midBox}>
+      <View>
 
-        <View style={{ marginBottom: 40 }}>
-          <Text style={styles.linkBold}>스피릿과 함께한 휴대폰 번호를 입력해주세요.</Text>
+        <View style={{ marginBottom: 20 }}>
+          <Text style={styles.linkBold}>이름</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="한글 또는 영문으로 입력해주세요."
+          />
+        </View>
+
+        <View style={{ marginBottom: 20 }}>
+          <Text style={styles.linkBold}>휴대폰번호</Text>
 
           <View style={{ flexDirection: 'row' }}>
             <TextInput
@@ -54,10 +62,10 @@ const App = () => {
         </View>
 
         <View style={{ marginBottom: 20 }}>
-          <Text style={styles.linkBold}>새 비밀번호</Text>
+          <Text style={styles.linkBold}>비밀번호</Text>
           <TextInput
             style={styles.input}
-            placeholder="새로운 비밀번호를 입력해주세요."
+            placeholder="비밀번호를 입력해주세요."
           />
           <TextInput
             style={styles.input}
@@ -65,20 +73,17 @@ const App = () => {
           />
           <Text style={styles.linkBk}>영문, 숫자, 특수문자 중 2종류 이상을 조합하여 8~20자리로 설정해 주세요.</Text>
         </View>
-
+        <Text style={styles.linkBold}>닉네임</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="닉네임을 입력해주세요."
+        />
+        <Text style={styles.linkOrange}>이미 사용중인 닉네임입니다.</Text>
       </View>
-
-      <View style={styles.btBox}>
-        <View>
-          <Pressable style={styles.pwBtn1}>
-            <Text Text style={{ color: 'gray', fontWeight: '600' }}>비밀번호 변경</Text>
-          </Pressable>
-        </View>
-        <View>
-          <Pressable style={styles.pwBtn2}>
-            <Text style={{ color: '#FFFFFF', fontWeight: 'bold' }}>비밀번호 변경</Text>
-          </Pressable>
-        </View>
+      <View>
+        <Pressable style={styles.LoginButton}>
+          <Text style={{ color: '#FFFFFF', fontWeight: 'bold' }}>시작하기</Text>
+        </Pressable>
       </View>
     </View>
   );
@@ -99,12 +104,21 @@ const styles = StyleSheet.create({
     paddingRight: 50,
     paddingBottom: 30
   },
+  linkOrange: {
+    color: '#EE414C',
+    textAlign: 'left',
+    fontSize: 11,
+    fontWeight: '200',
+    paddingLeft: 50,
+    paddingRight: 50,
+    paddingBottom: 6
+  },
   linkBold: {
     textAlign: 'left',
     fontWeight: '700',
     paddingLeft: 40,
     paddingRight: 50,
-    paddingBottom: 16
+    paddingBottom: 5
   },
   topBold: {
     textAlign: 'left',
@@ -146,14 +160,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     flexDirection: 'row'
   },
-  midBox:{
-    height: 560,
-    paddingTop:10
-  },
-  btBox:{
-    height: 100,
-    paddingTop:10
-  },
   mBtn1: {
     backgroundColor: '#E2E2E2',
     paddingVertical: 10,
@@ -175,24 +181,12 @@ const styles = StyleSheet.create({
     height: 40,
     lineHeight: 40
   },
-  pwBtn1: {
-    backgroundColor: '#E2E2E2',
-    fontWeight: '500',
-    paddingHorizontal: 110,
-    paddingVertical: 10,
-    marginLeft: 50,
-    marginRight: 50,
-    alignItems: 'center',
-    borderRadius: 10,
-    marginBottom: 10
-  },
-  pwBtn2: {
+  LoginButton: {
     backgroundColor: '#80D2F4',
     fontWeight: '500',
     paddingHorizontal: 110,
     paddingVertical: 10,
-    marginLeft: 50,
-    marginRight: 50,
+    margin: 50,
     alignItems: 'center',
     borderRadius: 10,
     marginBottom: 10
@@ -200,4 +194,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default App;
+export default JoinForm;
